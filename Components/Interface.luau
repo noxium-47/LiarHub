@@ -1,13 +1,13 @@
-local Library = (_NGAbysall.UILibrary == "Linoria" and "LinoriaLib" or "Obsidian")
+local Library = (Liar.UILibrary == "Linoria" and "LinoriaLib" or "Obsidian")
 local BaseUrl = "https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/"
-local AbysallUrl = "https://raw.githubusercontent.com/noxium-47/LiarHub/refs/heads/main/Loader.luau"
+local LiarUrl = "https://raw.githubusercontent.com/noxium-47/LiarHub/refs/heads/main/"
 
 local Interface = {
   Library = loadstring(game:HttpGet(BaseUrl .. "Library.lua"))(),
   SaveManager = loadstring(game:HttpGet(BaseUrl .. "addons/SaveManager.lua"))(),
   ThemeManager = loadstring(game:HttpGet(BaseUrl .. "addons/ThemeManager.lua"))(),
-  ApplyInfoTab = loadstring(game:HttpGet(AbysallUrl .. "Components/InfoTab.luau"))(),
-  ApplySettingsTab = loadstring(game:HttpGet(AbysallUrl .. "Components/SettingsTab.luau"))()
+  ApplyInfoTab = loadstring(game:HttpGet(LiarUrl .. "Components/InfoTab.luau"))(),
+  ApplySettingsTab = loadstring(game:HttpGet(LiarUrl .. "Components/SettingsTab.luau"))()
 }
 
 Interface.ThemeManager.BuiltInThemes = {
