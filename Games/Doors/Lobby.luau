@@ -1,14 +1,14 @@
 local LoadStart = tick()
-_NGAbysall.SavePath = "Doors/Lobby"
-local Library = _NGAbysall.Interface.Library
-local SaveManager = _NGAbysall.Interface.SaveManager
-local ThemeManager = _NGAbysall.Interface.ThemeManager
+_NGLiar.SavePath = "Doors/Lobby"
+local Library = _NGLiar.Interface.Library
+local SaveManager = _NGLiar.Interface.SaveManager
+local ThemeManager = _NGLiar.Interface.ThemeManager
 local Toggles = Library.Toggles
 local Options = Library.Options
 
 local function CloneReference(Object)
-    if _NGAbysall and _NGAbysall.Environment.cloneref then
-        return _NGAbysall.Environment.cloneref(Object)
+    if _NGLiar and _NGLiar.Environment.cloneref then
+        return _NGLiar.Environment.cloneref(Object)
     else
         return Object
     end
@@ -34,8 +34,8 @@ end
 task.wait(1)
 
 local Window = Library:CreateWindow({
-    Title = "Abysall Hub (Nortfix Edited)",
-    Footer = "dsc.gg/abysallhub",
+    Title = "LiarHub (Nortfix Edited)",
+    Footer = "dsc.gg/liarhub",
     NotifySide = "Right",
     ShowCustomCursor = false,
     AutoShow = true,
@@ -45,7 +45,7 @@ local Window = Library:CreateWindow({
     CornerRadius = 2,
 })
 
-_NGAbysall.Interface.ApplyInfoTab(Window)
+_NGLiar.Interface.ApplyInfoTab(Window)
 
 local Tabs = {
     General = Window:AddTab("General", "house"),
@@ -55,7 +55,7 @@ Functions.CheckCompatability = function(Array)
     local Valid = true
 
     for Index, Name in pairs(Array) do
-        if not _NGAbysall.Environment[Name] then
+        if not _NGLiar.Environment[Name] then
             Valid = false
         end
     end
@@ -65,7 +65,7 @@ end
 
 local function GetHiddenContainer()
 	if Functions.CheckCompatability({"gethui"}) then
-		return _NGAbysall.Environment.gethui()
+		return _NGLiar.Environment.gethui()
 	else
 		return Services.CoreGui
 	end
@@ -77,7 +77,7 @@ local NotificationLibrary = {
 }
 
 local Container = Instance.new("ScreenGui")
-Container.Name = _NGAbysall.ESPLibrary:GenerateRandomString()
+Container.Name = _NGLiar.ESPLibrary:GenerateRandomString()
 Container.Parent = GetHiddenContainer()
 Container.DisplayOrder = 32767
 Container.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -184,7 +184,7 @@ end
 Functions.Notify = function(Settings)
     local Container
     if Functions.CheckCompatability({"gethui"}) then
-        Container = _NGAbysall.Environment.gethui()
+        Container = _NGLiar.Environment.gethui()
     else
         Container = Services.CoreGui
     end
@@ -592,8 +592,8 @@ Groupboxes.General_QuickPlay:AddButton({
 
 Library:OnUnload(function()
     Connections.MainConnection:Disconnect()
-	getgenv()._NGAbysall = nil
+	getgenv()._NGLiar = nil
 end)
 
-_NGAbysall.Interface.ApplySettingsTab(Window)
+_NGLiar.Interface.ApplySettingsTab(Window)
 Functions.Notify({ Title = "Successfully loaded in " .. math.floor((tick() - LoadStart) * 1000) / 1000 .. " seconds." , Body = "Press '" .. tostring(Options.MenuKeybind.Value) .. "' to toggle the UI."})
