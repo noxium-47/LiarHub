@@ -1,6 +1,6 @@
 local Library = (_NGAbysall.UILibrary == "Linoria" and "LinoriaLib" or "Obsidian")
 local BaseUrl = "https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/"
-local AbysallUrl = "https://raw.githubusercontent.com/maksql765-boop/Abysall_Archives/refs/heads/main/"
+local AbysallUrl = "https://raw.githubusercontent.com/noxium-47/LiarHub/refs/heads/main/Loader.luau"
 
 local Interface = {
   Library = loadstring(game:HttpGet(BaseUrl .. "Library.lua"))(),
