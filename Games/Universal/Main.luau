@@ -12,10 +12,10 @@ local Bindable = Instance.new("BindableFunction")
 
 Bindable.OnInvoke = function(Response)
     local Success, Result = pcall(function()
-        toclipboard("https://dsc.gg/abysallhub")
+        toclipboard("https://dsc.gg/liarhub")
     end)
     if not Success then
-        Services.LocalPlayer:Kick("Failed to copy invite.\nhttps://dsc.gg/abysallhub")
+        Services.LocalPlayer:Kick("Failed to copy invite.\nhttps://dsc.gg/liarhub")
     end
 end
 
