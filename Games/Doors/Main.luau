@@ -466,7 +466,7 @@ Globals.DoorsNotify = function(NotifyOptions)
 	end)
 end
 
-Globals.STX = loadstring(game:HttpGet("https://raw.githubusercontent.com/bocaj111004/Liar/refs/heads/main/Components/STX.luau"))()
+Globals.STX = loadstring(game:HttpGet("https://raw.githubusercontent.com/noxium-47/LiarHub/refs/heads/main/Components/STX.luau"))()
 Functions.Notify = function(Settings)
 	local HiddenContainer = GetHiddenContainer()
 
