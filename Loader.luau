@@ -9,7 +9,7 @@ local GameList = {
     [2440500124] = "Doors"
 }
 
-local BaseUrl = "https://raw.githubusercontent.com/noxium-47/LiarHub/main/"
+local BaseUrl = "https://raw.githubusercontent.com/noxium-47/LiarHub/refs/heads/main/"
 getgenv().Liar = {
     Environment = loadstring(game:HttpGet(BaseUrl .. "Components/Environment.luau"))(),
     ESPLibrary  = loadstring(game:HttpGet(BaseUrl .. "Components/ESP.luau"))(),
