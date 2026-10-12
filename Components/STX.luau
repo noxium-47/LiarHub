@@ -1,5 +1,3 @@
--- orignal resource: https://github.com/BocusLuke/UI/blob/main/STX
-
 local GUI = game:GetService("CoreGui"):FindFirstChild("STX_Nofitication")
 if not GUI then
     local STX_Nofitication = Instance.new("ScreenGui")
